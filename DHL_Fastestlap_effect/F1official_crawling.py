@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import requests
-import time
 import mysql.connector
 import pandas as pd
 import matplotlib.pyplot as plt
