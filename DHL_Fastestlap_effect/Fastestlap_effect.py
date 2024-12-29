@@ -110,10 +110,15 @@ for year in year_list:
         except:
             continue
         
+        # from past team name to current team name.
         if "Alfa Romeo Ferrari" in constructor_in_each_year:
             constructor_in_each_year["Kick Sauber Ferrari"] = constructor_in_each_year.pop("Alfa Romeo Ferrari")
+        elif "Alfa Romeo Racing Ferrari" in constructor_in_each_year:
+            constructor_in_each_year["Kick Sauber Ferrari"] = constructor_in_each_year.pop("Alfa Romeo Racing Ferrari")
         elif "AlphaTauri Honda RBPT" in constructor_in_each_year:
             constructor_in_each_year["RB Honda RBPT"] = constructor_in_each_year.pop("AlphaTauri Honda RBPT")
+        elif "Scuderia Toro Rosso Honda" in constructor_in_each_year:
+            constructor_in_each_year["RB Honda RBPT"] = constructor_in_each_year.pop("Scuderia Toro Rosso Honda")
         elif "AlphaTauri Honda" in constructor_in_each_year:
             constructor_in_each_year["RB Honda RBPT"] = constructor_in_each_year.pop("AlphaTauri Honda")
         elif "McLaren Renault" in constructor_in_each_year:
@@ -124,10 +129,15 @@ for year in year_list:
             constructor_in_each_year["Red Bull Racing Honda RBPT"] = constructor_in_each_year.pop("Red Bull Racing RBPT")
         elif "Renault" in constructor_in_each_year:
             constructor_in_each_year["Alpine Renault"] = constructor_in_each_year.pop("Renault")
+        elif "Racing Point BWT Mercedes" in constructor_in_each_year:
+            constructor_in_each_year["Aston Martin Aramco Mercedes"] = constructor_in_each_year.pop("Racing Point BWT Mercedes")
+        elif "Aston Martin Mercedes" in constructor_in_each_year:
+            constructor_in_each_year["Aston Martin Aramco Mercedes"] = constructor_in_each_year.pop("Aston Martin Mercedes")
+        elif "Racing Point BWT Mercedes" in constructor_in_each_year:
+            constructor_in_each_year["Aston Martin Aramco Mercedes"] = constructor_in_each_year.pop("Racing Point BWT Mercedes")
 
         constructor_in_total[f"{year}"] = constructor_in_each_year
         
-    #print(f"{year}: {constructor_in_each_year}")
     print(constructor_in_total)
 
 
