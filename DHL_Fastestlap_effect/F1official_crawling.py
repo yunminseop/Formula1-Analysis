@@ -135,8 +135,11 @@ for year in year_list:
             constructor_in_each_year["Aston Martin Aramco Mercedes"] = constructor_in_each_year.pop("Racing Point BWT Mercedes")
         if "Aston Martin Mercedes" in constructor_in_each_year:
             constructor_in_each_year["Aston Martin Aramco Mercedes"] = constructor_in_each_year.pop("Aston Martin Mercedes")
+<<<<<<< HEAD
         if "Racing Point BWT Mercedes" in constructor_in_each_year:
             constructor_in_each_year["Aston Martin Aramco Mercedes"] = constructor_in_each_year.pop("Racing Point BWT Mercedes")
+=======
+>>>>>>> origin/main
 
     constructor_in_total[f"{year}"] = constructor_in_each_year
     
